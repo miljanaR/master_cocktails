@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="js/user.js"></script>
+</head>
+<body>
+   <div class="container">
+      <div id="backg"></div>
+      <div class="row">
+         <div class="col-lg-4 col-lg-offset-4">
+            {% if error %}
+            <div class="alert alert-danger">
+               <strong>{{error}}</strong>
+            </div>
+            {% endif %}
+            <form action="" name="user" method="post">
+               <div class="form-group form-group-lg">
+                  <label for="">Username</label>
+                  <input type="text" name="username" id="username" placeholder="" class="class="form-control" autofocus/>
+               </div>
+               <div class="form-group form-group-lg">
+                  <label for="">Password</label>
+                  <input type="password" name="password" id="password" placeholder="" class="class="form-control"/>
+               </div>
+               <div class="form-group form-group-lg">
+                  <label for="">First name</label>
+                  <input type="text" name="name" id="name" placeholder="" class="class="form-control">
+               </div>
+               <div class="form-group form-group-lg">
+                  <label for="">Last name</label>
+                  <input type="text" name="surname" id="surname" placeholder="" class="class="form-control">
+               </div>
+               <div class="form-group form-group-lg">
+                  <label for="">Email</label>
+                  <input type="text" name="email" id="email" placeholder="" class="class="form-control">
+               </div>
+               <button type="submit">Register</button>
+            </form>
+            Already have an account? Log in <a href="/login">here!</a>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

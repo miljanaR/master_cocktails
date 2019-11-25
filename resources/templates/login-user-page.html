@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="js/user.js"></script>
+</head>
+<body>
+   <div class="container">
+      <div id="backg"></div>
+      <div class="row">
+         <div class="col-lg-4 col-lg-offset-4">
+            {% if error %}
+            <div class="alert alert-danger">
+               <strong>{{error}}</strong>
+            </div>
+            {% endif %}
+            <form action="" name="user" method="post">
+               <div class="form-group form-group-lg">
+                  <label for="">Username</label>
+                  <input type="text" name="username" id="username"  class="class="form-control username" autofocus>
+               </div>
+               <div class="form-group form-group-lg">
+                  <label for="">Password </label>
+                  <input type="password" name="password" id="password"  class="class="form-control pass">
+               </div>
+               <button type="submit">Log in</button>
+            </form>
+            Sign up <a href="/register">here</a>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
