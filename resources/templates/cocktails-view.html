@@ -1,0 +1,28 @@
+{% include "templates/header.html" %}
+<div class="row">
+   <div class="col-lg-12">
+     <table id="table-cocktails" class="table">
+      <thead>
+        <th>id</th>
+        <th>Name</th>
+        <th>Style</th>
+        <th>Alcohol</th>
+        <th>ingredients</th>
+        <th>Country</th>
+       </thead>
+       <tbody>
+         {% for c in cocktails %}
+         <tr id="{{c.id}}" onclick="" class="clickable-row">
+         <td>{{c.id}}</td>
+         <td>{{c.name}}</td>
+         <td>{{c.sname}}</td>
+         <td>{{c.alcohol}}</td>
+         <td>{{c.ingredients}}</td>
+         <td>{{c.country}}</td>
+         </tr>
+         {% endfor %}
+       </tbody>
+     </table>
+   </div>
+</div>
+

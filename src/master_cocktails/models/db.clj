@@ -12,6 +12,11 @@
 
 (kor/defentity user
                (kor/table :user))
+(kor/defentity style
+             (kor/table :style))
+
+(kor/defentity cocktail
+             (kor/table :cocktail))
 
 (defn add-user [params]
   (kor/insert user
@@ -20,4 +25,9 @@
 (defn find-user-from-db [params]
   (kor/select user
               (kor/where params)))
+(defn get-cocktails []
+  (kor/select cocktail
+            (kor/fields :* [:style.name :sname])
+            (kor/join style (= :style :style.id))
+            (kor/order :id :ASC)))
 
