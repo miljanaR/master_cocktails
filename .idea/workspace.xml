@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b377734e-2d52-4b1d-aafb-be47867bf55f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/admin-home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/admin-home-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/user-home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/user-home-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/master_cocktails/handler.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/master_cocktails/handler.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/master_cocktails/models/db.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/master_cocktails/models/db.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_cocktailsl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_cocktailsl.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,83 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/user-home-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/login-user-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/master_cocktails/repl.clj">
+        <entry file="file://$PROJECT_DIR$/db_cocktailsl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/admin-home-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/user-register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/cocktails-view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/db.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/master_cocktails/handler.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="374">
+              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -194,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/master_cocktails/routes/cocktail.clj" />
         <option value="$PROJECT_DIR$/resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/templates/header.html" />
+        <option value="$PROJECT_DIR$/db_cocktailsl.sql" />
       </list>
     </option>
   </component>
@@ -337,15 +262,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.37697518" side_tool="true" weight="0.25718608" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6202946" visible="true" weight="0.22163388" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6202946" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="6" sideWeight="0.3797054" side_tool="true" visible="true" weight="0.22163388" />
-      <window_info active="true" anchor="bottom" x="-1344" y="449" width="1322" height="247" id="Terminal" order="0" sideWeight="0.4977307" type="WINDOWED" visible="true" weight="0.45335516" />
+      <window_info anchor="bottom" x="-1344" y="449" width="1322" height="247" id="Terminal" order="0" sideWeight="0.4977307" type="WINDOWED" weight="0.45335516" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50226927" side_tool="true" weight="0.45335516" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3289689" />
@@ -545,8 +471,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/master_cocktails/repl.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="306">
           <caret line="18" column="18" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_cocktailsl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
         </state>
       </provider>
     </entry>
