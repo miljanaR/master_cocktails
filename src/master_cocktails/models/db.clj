@@ -30,4 +30,14 @@
             (kor/fields :* [:style.name :sname])
             (kor/join style (= :style :style.id))
             (kor/order :id :ASC)))
+(defn find-cocktail [params]
+  (kor/select cocktail
+            (kor/fields :* [:style.name :sname])
+            (kor/join style (= :style :style.id))
+            (kor/where params)
+            (kor/order :id :ASC)))
+
+(defn get-styles []
+  (kor/select style
+            (kor/order :id :ASC)))
 

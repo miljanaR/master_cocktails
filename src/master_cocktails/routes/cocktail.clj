@@ -15,6 +15,9 @@
           (= "" text))
     (db/get-cocktails)
     ))
+(defn authenticated-admin? [session]
+  (and (authenticated? session)
+       (="admin" (:role (:identity session)))))
 
 (defn get-search-cocktails [params session]
   (render-file "templates/cocktails-view.html" {:title "Preview cocktails"
@@ -30,6 +33,25 @@
                              "application/json" (->(:text params)
                                                    (get-cocktails)
                                                    (json/write-str)))))
+(defn get-cocktail-page [page params session &[message]]
+  (println params)
+  (render-file page {:title   (str "Cocktail " (:id params))
+                     :logged  (:identity session)
+                     :message message
+                     :cocktail    (first (db/find-cocktail params))
+                     :styles  (db/get-styles)
+                     }))
+
+(defn get-cocktail [{:keys [params session]} &[message]]
+  (cond
+    (not (authenticated? session))
+    (redirect "/login")
+    (authenticated-admin? session)
+    (get-cocktail-page "templates/cocktail-admin.html" params session message)
+    :else
+    (get-cocktail-page "templates/cocktail-user.html" params session message)))
 
 (defroutes cocktail-routes
-           (GET "/cocktails" request (preview-cocktails (:session request))))
+           (GET "/cocktails" request (preview-cocktails (:session request)))
+           (GET "/cocktail/:id" request (get-cocktail request)))
+

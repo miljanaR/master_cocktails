@@ -1,0 +1,46 @@
+{% include "templates/header.html" %}
+<div class="blog">
+    <div class="blog-head">
+        <h3>{{cocktail.name}}</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="blog-img">
+                <img src="{{cocktail.picture}}" class="img-responsive zoom-img"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="blog-info-text">
+                {% ifequal cocktail.cocktail-strength 1 %}
+                <p class="strengthp"><strong>Strength:</strong> Nonalcoholic</p>
+                {% endifequal %}
+                {% ifequal cocktail.cocktail-strength 2 %}
+                <p class="strengthp"><strong>Strength:</strong> Weak</p>
+                {% endifequal %}
+                {% ifequal cocktail.cocktail-strength 3 %}
+                <p class="strengthp"><strong>Strength:</strong> Light</p>
+                {% endifequal %}
+                {% ifequal cocktail.cocktail-strength 4 %}
+                <p class="strengthp"><strong>Strength:</strong> Medium</p>
+                {% endifequal %}
+                {% ifequal cocktail.cocktail-strength 5 %}
+                <p class="strengthp"><strong>Strength:</strong> Strong</p>
+                {% endifequal %}
+                {% ifequal cocktail.price 0 %}
+                <p class="strengthp"><strong>Price:</strong> Expensive</p>
+                {% endifequal %}
+                {% ifequal cocktail.price 1 %}
+                <p class="strengthp"><strong>Price:</strong> Cheap</p>
+                {% endifequal %}
+                <p class="strengthp"><strong>Style:</strong> {{cocktail.sname}}</a></p>
+                <p class="strengthp"><strong>ingredients:</strong> {{cocktail.ingredients}}</p>
+                <p class="strengthp"><strong>Country:</strong> {{cocktail.country}}</p>
+                <p class="strengthp"><strong>How ro mix:</strong> {{cocktail.mix}}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="clearfix"> </div>
+</div>
+
