@@ -1,1 +1,147 @@
-<p>admin-cocktail-edit</p>
+{% include "templates/header.html" %}
+<div class="blog">
+  <div class="blog-head">
+    <h3>{{cocktail.name}}</h3>
+    <hr/>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="blog-img" id="cocktail-picture">
+        <img id="cocktail-img" src="{{cocktail.picture}}" class="img-responsive zoom-img"/>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="blog-info-text">
+        <form action="" name="cocktail" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <div class="form-group form-group-lg">
+            <label for="id" class="control-label col-lg-2">id:</label>
+            <div class="col-lg-10">
+              <input type="text" id="id" name="id" value="{{cocktail.id}}" readonly/>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="name" class="control-label col-lg-2">Name:</label>
+            <div class="col-lg-10">
+              <input type="text" name="name" id="name" placeholder="Name" value="{{cocktail.name}}"/>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="color" class="control-label col-lg-2">Color:</label>
+            <div class="col-lg-10">
+              <input type="text" name="name" id="color" placeholder="Name" value="{{cocktail.color}}"/>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label class="control-label col-lg-2">Strength:</label>
+            <div class="col-lg-10">
+              {% ifequal cocktail.cocktail-strength "1" %}
+              <label class="radio-inline"><input type="radio" checked name="cocktail-strength"
+                                                 value="1">Nonalcoholic</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
+              {% endifequal %}
+              {% ifequal cocktail.cocktail-strength "2" %}
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
+              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Weak</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
+              {% endifequal %}
+              {% ifequal cocktail.cocktail-strength "3" %}
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
+              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Light</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
+              {% endifequal %}
+              {% ifequal cocktail.cocktail-strength "4" %}
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
+              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Medium</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
+              {% endifequal %}
+              {% ifequal cocktail.cocktail-strength "5" %}
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
+              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
+              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Strong</label>
+              {% endifequal %}
+
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label class="control-label col-lg-2">Price:</label>
+            <div class="col-lg-10">
+              {% ifequal cocktail.price "0" %}
+              <label class="radio-inline"><input type="radio" checked name="price" value="0">Expensive</label>
+              <label class="radio-inline"><input type="radio" name="price" value="1">Cheap</label>
+              {% endifequal %}
+              {% ifequal cocktail.price "1" %}
+              <label class="radio-inline"><input type="radio" name="price" value="0">Expensive</label>
+              <label class="radio-inline"><input type="radio" checked name="price" value="1">Cheap</label>
+              {% endifequal %}
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="style" class="control-label col-lg-2">Style:</label>
+            <div class="col-lg-10">
+              <select id="style" name="style">
+                {% for style in styles %}
+                {% ifequal style.id cocktail.style %}
+                <option value="{{style.id}}" selected>{{style.name}}</option>
+                {% endifequal %}
+                {% ifunequal style.id cocktail.style %}
+                <option value="{{style.id}}">{{style.name}}</option>
+                {% endifunequal %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="alcohol" class="control-label col-lg-2">Picture:</label>
+            <div class="col-lg-10 col-lg-offset-2" id="input-picture">
+              <input type="text" id="pic-url" name="url" placeholder="Image url" value="{{cocktail.picture}}"/>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="alcohol" class="control-label col-lg-2">Alcohol:</label>
+            <div class="col-lg-10">
+              <input type="text" name="alcohol" id="alcohol" placeholder="Alcohol (%)" value="{{cocktail.alcohol}}"/>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="ingredients" class="control-label col-lg-2">ingredients:</label>
+            <div class="col-lg-10">
+                     <textarea rows="5" name="ingredients" id="ingredients" placeholder="ingredients">{{cocktail.ingredients}}
+                     </textarea>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="country" class="control-label col-lg-2">Country:</label>
+            <div class="col-lg-10">
+              <input type="text" name="country" id="country" placeholder="Country" value="{{cocktail.country}}"/>
+            </div>
+          </div>
+          <div class="form-group form-group-lg">
+            <label for="info" class="control-label col-lg-2">Info:</label>
+            <div class="col-lg-10">
+              <textarea name="info" rows="5" id="info" placeholder="mix">{{cocktail.mix}}</textarea>
+            </div>
+          </div>
+          <div class="form-group form-group-lg pull-right">
+            <input type="button" value="Edit" onclick=""/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="clearfix"></div>
+</div>
+
+
