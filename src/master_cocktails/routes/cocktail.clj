@@ -40,6 +40,8 @@
                      :message message
                      :cocktail    (first (db/find-cocktail params))
                      :styles  (db/get-styles)
+                     :seasons (db/get-seasons)
+                     :moments (db/get-moments)
                      }))
 
 (defn get-cocktail [{:keys [params session]} &[message]]

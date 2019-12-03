@@ -12,11 +12,19 @@
 
 (kor/defentity user
                (kor/table :user))
+
+(kor/defentity season
+               (kor/table :season))
+
 (kor/defentity style
-             (kor/table :style))
+               (kor/table :style))
+
+(kor/defentity moment
+               (kor/table :moment))
+
 
 (kor/defentity cocktail
-             (kor/table :cocktail))
+               (kor/table :cocktail))
 
 (defn add-user [params]
   (kor/insert user
@@ -27,17 +35,32 @@
               (kor/where params)))
 (defn get-cocktails []
   (kor/select cocktail
-            (kor/fields :* [:style.name :sname])
-            (kor/join style (= :style :style.id))
-            (kor/order :id :ASC)))
+              (kor/fields :* [:style.name :sname])
+              (kor/fields :* [:season.name :seas-name])
+              (kor/fields :* [:moment.name :mname])
+              (kor/join style (= :style :style.id))
+              (kor/join season (= :season :season.id))
+              (kor/join moment (= :moment :moment.id))
+              (kor/order :id :ASC)))
 (defn find-cocktail [params]
   (kor/select cocktail
-            (kor/fields :* [:style.name :sname])
-            (kor/join style (= :style :style.id))
-            (kor/where params)
-            (kor/order :id :ASC)))
+              (kor/fields :* [:style.name :sname])
+              (kor/fields :* [:season.name :seas-name])
+              (kor/fields :* [:moment.name :mname])
+              (kor/join style (= :style :style.id))
+              (kor/join season (= :season :season.id))
+              (kor/join moment (= :moment :moment.id))
+              (kor/where params)
+              (kor/order :id :ASC)))
 
 (defn get-styles []
   (kor/select style
-            (kor/order :id :ASC)))
+              (kor/order :id :ASC)))
 
+(defn get-seasons []
+  (kor/select season
+              (kor/order :id :ASC)))
+
+(defn get-moments []
+  (kor/select moment
+              (kor/order :id :ASC)))

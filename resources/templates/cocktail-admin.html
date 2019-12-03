@@ -101,16 +101,42 @@
               </select>
             </div>
           </div>
+
           <div class="form-group form-group-lg">
-            <label for="alcohol" class="control-label col-lg-2">Picture:</label>
-            <div class="col-lg-10 col-lg-offset-2" id="input-picture">
-              <input type="text" id="pic-url" name="url" placeholder="Image url" value="{{cocktail.picture}}"/>
+            <label for="season" class="control-label col-lg-2">Season:</label>
+            <div class="col-lg-10">
+              <select id="season" name="season">
+                {% for season in seasons %}
+                {% ifequal season.id cocktail.season %}
+                <option value="{{season.id}}" selected>{{season.name}}</option>
+                {% endifequal %}
+                {% ifunequal season.id cocktail.season %}
+                <option value="{{season.id}}">{{season.name}}</option>
+                {% endifunequal %}
+                {% endfor %}
+              </select>
             </div>
           </div>
           <div class="form-group form-group-lg">
-            <label for="alcohol" class="control-label col-lg-2">Alcohol:</label>
+            <label for="moment" class="control-label col-lg-2">Moment:</label>
             <div class="col-lg-10">
-              <input type="text" name="alcohol" id="alcohol" placeholder="Alcohol (%)" value="{{cocktail.alcohol}}"/>
+              <select id="moment" name="moment">
+                {% for moment in moments %}
+                {% ifequal moment.id cocktail.moment %}
+                <option value="{{moment.id}}" selected>{{moment.name}}</option>
+                {% endifequal %}
+                {% ifunequal moment.id cocktail.moment %}
+                <option value="{{moment.id}}">{{moment.name}}</option>
+                {% endifunequal %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group form-group-lg">
+            <label  class="control-label col-lg-2">Picture:</label>
+            <div class="col-lg-10 col-lg-offset-2" id="input-picture">
+              <input type="text" id="pic-url" name="url" placeholder="Image url" value="{{cocktail.picture}}"/>
             </div>
           </div>
           <div class="form-group form-group-lg">
