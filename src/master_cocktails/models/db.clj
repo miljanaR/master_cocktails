@@ -64,3 +64,8 @@
 (defn get-moments []
   (kor/select moment
               (kor/order :id :ASC)))
+
+(defn update-cocktail [params]
+  (kor/update cocktail
+            (kor/set-fields params)
+            (kor/where {:id (:id params)})))

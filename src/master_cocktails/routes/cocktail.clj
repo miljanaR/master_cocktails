@@ -53,7 +53,19 @@
     :else
     (get-cocktail-page "templates/cocktail-user.html" params session message)))
 
+
+
+(defresource update-cocktail [{:keys [params session]}]
+             :allowed-methods [:put]
+             :available-media-types ["application/json"]
+             (println params)
+             (db/update-cocktail params))
+
+
 (defroutes cocktail-routes
            (GET "/cocktails" request (preview-cocktails (:session request)))
+           (PUT "/cocktail" request (update-cocktail request))
            (GET "/cocktail/:id" request (get-cocktail request)))
+
+
 
