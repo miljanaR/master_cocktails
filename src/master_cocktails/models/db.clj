@@ -19,9 +19,11 @@
 (kor/defentity style
                (kor/table :style))
 
+(kor/defentity cocktail-strength
+               (kor/table :cocktail-strength))
+
 (kor/defentity moment
                (kor/table :moment))
-
 
 (kor/defentity cocktail
                (kor/table :cocktail))
@@ -38,18 +40,22 @@
               (kor/fields :* [:style.name :sname])
               (kor/fields :* [:season.name :seas-name])
               (kor/fields :* [:moment.name :mname])
+              (kor/fields :* [:cocktail-strength.name :strename])
               (kor/join style (= :style :style.id))
               (kor/join season (= :season :season.id))
               (kor/join moment (= :moment :moment.id))
+              (kor/join cocktail-strength (= :cocktail-strength :cocktail-strength.id))
               (kor/order :id :ASC)))
 (defn find-cocktail [params]
   (kor/select cocktail
               (kor/fields :* [:style.name :sname])
               (kor/fields :* [:season.name :seas-name])
               (kor/fields :* [:moment.name :mname])
+              (kor/fields :* [:cocktail-strength.name :strename])
               (kor/join style (= :style :style.id))
               (kor/join season (= :season :season.id))
               (kor/join moment (= :moment :moment.id))
+              (kor/join cocktail-strength (= :cocktail-strength :cocktail-strength.id))
               (kor/where params)
               (kor/order :id :ASC)))
 
@@ -63,6 +69,9 @@
 
 (defn get-moments []
   (kor/select moment
+              (kor/order :id :ASC)))
+(defn get-strengths []
+  (kor/select cocktail-strength
               (kor/order :id :ASC)))
 
 (defn update-cocktail [params]

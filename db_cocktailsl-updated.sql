@@ -38,22 +38,44 @@ CREATE TABLE `cocktail` (
   KEY `style` (`style`),
   KEY `season` (`season`),
   KEY `moment` (`moment`),
+  KEY `cocktail-strength` (`cocktail-strength`),
   CONSTRAINT `cock_ibfk_1` FOREIGN KEY (`style`) REFERENCES `style` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `cocktail_ibfk_1` FOREIGN KEY (`season`) REFERENCES `season` (`id`),
-  CONSTRAINT `cocktail_ibfk_2` FOREIGN KEY (`moment`) REFERENCES `moment` (`id`)
+  CONSTRAINT `cocktail_ibfk_2` FOREIGN KEY (`moment`) REFERENCES `moment` (`id`),
+  CONSTRAINT `cocktail_ibfk_3` FOREIGN KEY (`cocktail-strength`) REFERENCES `cocktail-strength` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 /*Data for the table `cocktail` */
 
-insert  into `cocktail`(`id`,`name`,`cocktail-strength`,`ingredients`,`style`,`price`,`color`,`country`,`mix`,`picture`,`season`,`moment`) values 
-(7,'Black and Tan',1,'½ pints stout beer ½ pints lager',1,1,'brown','Mexico','pour stout beer into the beer glass pour lager into the glass','/images/7.png',1,1),
-(8,'cocktail 2',5,'½ pints stout beer ½ pints lager',2,1,'blue','Japan','pour stout beer into the beer glass pour lager into the glass','/images/8.png',2,2),
-(9,'cocktail 3',3,'½ pints stout beer ½ pints lager',3,1,'blue','India','pour stout beer into the beer glass pour lager into the glass','/images/9.png',3,3),
-(10,'cocktail 4',2,'½ pints stout beer ½ pints lager',4,1,'blue','Tunis','pour stout beer into the beer glass pour lager into the glass','/images/18.png',4,4),
-(11,'cocktail 5 ',1,'(NULL)½ pints stout beer ½ pints lager',4,1,'red','Thailand','pour stout beer into the beer glass pour lager into the glass','/images/18.png',5,5),
-(12,'cocktail 6 ',2,'½ pints stout beer ½ pints lager',3,1,'blue','','pour stout beer into the beer glass pour lager into the glass','/images/18.png',2,6),
-(13,'cocktail 7',2,'½ pints stout beer ½ pints lager',2,1,'blue','','pour stout beer into the beer glass pour lager into the glass','/images/18.png',2,7),
+insert  into `cocktail`(`id`,`name`,`cocktail-strength`,`ingredients`,`style`,`price`,`color`,`country`,`mix`,`picture`,`season`,`moment`) values
+(7,'Black and Tan',1,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,1,'blue','Mexico','pour stout beer into the beer glass pour lager into the glass','/images/7.png',4,11),
+(8,'cocktail 2',5,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',2,1,'blue','Japan','pour stout beer into the beer glass pour lager into the glass','/images/8.png',2,2),
+(9,'cocktail 3',3,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',3,1,'blue','India','pour stout beer into the beer glass pour lager into the glass','/images/9.png',3,3),
+(10,'cocktail 4',2,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,1,'blue','Tunis','pour stout beer into the beer glass pour lager into the glass','/images/18.png',4,4),
+(11,'cocktail 5 ',1,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,1,'red','Thailand','pour stout beer into the beer glass pour lager into the glass','/images/18.png',5,5),
+(12,'cocktail 6 ',2,'1/2 pints stout beer 1/2 pints lager \n                     \n                     \n                \n ',6,1,'blue','Srbija','pour stout beer into the beer glass pour lager into the glass ','/images/18.png',2,6),
+(13,'cocktail 7',2,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',2,1,'blue','','pour stout beer into the beer glass pour lager into the glass','/images/18.png',2,7),
 (14,'cocktail 8',2,'',3,1,'blue','','pour stout beer into the beer glass pour lager into the glass','/images/18.png',5,8);
+
+/*Table structure for table `cocktail-strength` */
+
+DROP TABLE IF EXISTS `cocktail-strength`;
+
+CREATE TABLE `cocktail-strength` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `cocktail-strength` */
+
+insert  into `cocktail-strength`(`id`,`name`) values
+(1,'Nonalcohoic'),
+(2,'Weak'),
+(3,'Light'),
+(4,'Medium'),
+(5,'Strong'),
+(6,'Extremly Strong');
 
 /*Table structure for table `moment` */
 
@@ -67,7 +89,7 @@ CREATE TABLE `moment` (
 
 /*Data for the table `moment` */
 
-insert  into `moment`(`id`,`name`) values 
+insert  into `moment`(`id`,`name`) values
 (1,'Staying in, by the fire'),
 (2,'Poolside'),
 (3,'Company Party'),
@@ -95,7 +117,7 @@ CREATE TABLE `season` (
 
 /*Data for the table `season` */
 
-insert  into `season`(`id`,`name`) values 
+insert  into `season`(`id`,`name`) values
 (1,'Fall'),
 (2,'Spring'),
 (3,'Summer'),
@@ -115,7 +137,7 @@ CREATE TABLE `style` (
 
 /*Data for the table `style` */
 
-insert  into `style`(`id`,`name`) values 
+insert  into `style`(`id`,`name`) values
 (2,'Classic'),
 (3,'Creamy'),
 (4,'Frozen'),
@@ -147,7 +169,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`username`,`password`,`name`,`surname`,`email`,`role`) values 
+insert  into `user`(`id`,`username`,`password`,`name`,`surname`,`email`,`role`) values
 (1,'milja','$2a$10$CuwDkTuD4zc1x7adyx8NxuwHs7ML5qzHYK7bTha5FC/zVTwEzJK3O','Miljana','Ratkov','m.ratkov995@gmail.com','user'),
 (2,'admin','$2a$04$RNs5Xtjo7F3upPGzSbVPTOfEOPkevYQYk96t82l4A47UenCK6l9Ou','Test','Admin','admin@gmail.com','admin');
 

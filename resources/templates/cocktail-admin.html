@@ -136,6 +136,9 @@ input[type=submit], input[type=button] {
 		    params.append("style", $("#style").val());
 		    params.append("season", $("#season").val());
 		    params.append("moment", $("#moment").val());
+		    params.append("country", $("#country").val());
+		    params.append("ingredients", $("#ingredients").val());
+		    params.append("mix", $("#info").val());
 
 		    $.ajax({
 		        type: "PUT",
@@ -186,48 +189,7 @@ input[type=submit], input[type=button] {
               <input type="text" name="name" id="color" placeholder="Name" value="{{cocktail.color}}"/>
             </div>
           </div>
-          <div class="form-group form-group-lg">
-            <label  class="control-label col-lg-2">Strength:</label>
-            <div class="col-lg-10">
-              {% ifequal cocktail.cocktail-strength "1" %}
-              <label class="radio-inline"><input type="radio" checked name="cocktail-strength"
-                                                 value="1">Nonalcoholic</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
-              {% endifequal %}
-              {% ifequal cocktail.cocktail-strength "2" %}
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
-              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Weak</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
-              {% endifequal %}
-              {% ifequal cocktail.cocktail-strength "3" %}
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
-              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Light</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
-              {% endifequal %}
-              {% ifequal cocktail.cocktail-strength "4" %}
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
-              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Medium</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Strong</label>
-              {% endifequal %}
-              {% ifequal cocktail.cocktail-strength "5" %}
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Nonalcoholic</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Weak</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Light</label>
-              <label class="radio-inline"><input type="radio" name="cocktail-strength" value="1">Medium</label>
-              <label class="radio-inline"><input type="radio" checked name="cocktail-strength" value="1">Strong</label>
-              {% endifequal %}
 
-            </div>
-          </div>
           <div class="form-group form-group-lg">
             <label class="control-label col-lg-2">Price:</label>
             <div class="col-lg-10">
@@ -241,6 +203,9 @@ input[type=submit], input[type=button] {
               {% endifequal %}
             </div>
           </div>
+
+
+
           <div class="form-group form-group-lg">
             <label for="style" class="control-label col-lg-2">Style:</label>
             <div class="col-lg-10">
@@ -256,6 +221,23 @@ input[type=submit], input[type=button] {
               </select>
             </div>
           </div>
+
+          <div class="form-group form-group-lg">
+            <label for="cocktail-strngth" class="control-label col-lg-2">Strength:</label>
+            <div class="col-lg-10">
+              <select id="cocktail-strngth" name="cocktail-strngth">
+                {% for str in strengths %}
+                {% ifequal str.id cocktail.cocktail-strength %}
+                <option value="{{str.id}}" selected>{{str.name}}</option>
+                {% endifequal %}
+                {% ifunequal str.id cocktail.cocktail-strength %}
+                <option value="{{str.id}}">{{str.name}}</option>
+                {% endifunequal %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
 
           <div class="form-group form-group-lg">
             <label for="season" class="control-label col-lg-2">Season:</label>
@@ -308,7 +290,7 @@ input[type=submit], input[type=button] {
             </div>
           </div>
           <div class="form-group form-group-lg">
-            <label for="info" class="control-label col-lg-2">Info:</label>
+            <label for="info" class="control-label col-lg-2">How to mix:</label>
             <div class="col-lg-10">
               <textarea name="info" rows="5" id="info" placeholder="mix">{{cocktail.mix}}</textarea>
             </div>
@@ -324,5 +306,5 @@ input[type=submit], input[type=button] {
 </div>
 <div class="clearfix"></div>
 </div>
-
+<p>{{cocktail.cocktail-strength}}</p>
 </body>

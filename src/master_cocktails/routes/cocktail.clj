@@ -42,6 +42,7 @@
                      :styles  (db/get-styles)
                      :seasons (db/get-seasons)
                      :moments (db/get-moments)
+                     :strengths (db/get-strengths)
                      }))
 
 (defn get-cocktail [{:keys [params session]} &[message]]
