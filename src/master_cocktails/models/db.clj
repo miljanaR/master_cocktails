@@ -74,7 +74,11 @@
   (kor/select cocktail-strength
               (kor/order :id :ASC)))
 
+(defn delete-cocktail [id]
+  (kor/delete cocktail
+              (kor/where {:id id})))
+
 (defn update-cocktail [params]
   (kor/update cocktail
-            (kor/set-fields params)
-            (kor/where {:id (:id params)})))
+              (kor/set-fields params)
+              (kor/where {:id (:id params)})))

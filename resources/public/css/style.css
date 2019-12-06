@@ -1,0 +1,17 @@
+.blog-img img {
+    width: 50%;
+}
+
+.strengthp {
+    color: #542f1d;
+    font-size: 20px;
+    text-shadow: 1px 1px 0px #fff;
+    margin: 12px 0 26px 0;
+    line-height: 1.8em;
+
+}
+h5{
+   color: #542f1d;
+   font-size: 38px;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+}

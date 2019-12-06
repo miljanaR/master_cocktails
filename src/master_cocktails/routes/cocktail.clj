@@ -17,12 +17,12 @@
     ))
 (defn authenticated-admin? [session]
   (and (authenticated? session)
-       (="admin" (:role (:identity session)))))
+       (= "admin" (:role (:identity session)))))
 
 (defn get-search-cocktails [params session]
-  (render-file "templates/cocktails-view.html" {:title "Preview cocktails"
-                                             :logged (:identity session)
-                                             :cocktails (get-cocktails nil)}))
+  (render-file "templates/cocktails-view.html" {:title     "Preview cocktails"
+                                                :logged    (:identity session)
+                                                :cocktails (get-cocktails nil)}))
 
 (defresource preview-cocktails [{:keys [params session]}]
              :allowed-methods [:get]
@@ -30,22 +30,22 @@
              :handle-ok #(let [media-type (get-in % [:representation :media-type])]
                            (condp = media-type
                              "text/html" (get-search-cocktails params session)
-                             "application/json" (->(:text params)
-                                                   (get-cocktails)
-                                                   (json/write-str)))))
-(defn get-cocktail-page [page params session &[message]]
+                             "application/json" (-> (:text params)
+                                                    (get-cocktails)
+                                                    (json/write-str)))))
+(defn get-cocktail-page [page params session & [message]]
   (println params)
-  (render-file page {:title   (str "Cocktail " (:id params))
-                     :logged  (:identity session)
-                     :message message
-                     :cocktail    (first (db/find-cocktail params))
-                     :styles  (db/get-styles)
-                     :seasons (db/get-seasons)
-                     :moments (db/get-moments)
+  (render-file page {:title     (str "Cocktail " (:id params))
+                     :logged    (:identity session)
+                     :message   message
+                     :cocktail  (first (db/find-cocktail params))
+                     :styles    (db/get-styles)
+                     :seasons   (db/get-seasons)
+                     :moments   (db/get-moments)
                      :strengths (db/get-strengths)
                      }))
 
-(defn get-cocktail [{:keys [params session]} &[message]]
+(defn get-cocktail [{:keys [params session]} & [message]]
   (cond
     (not (authenticated? session))
     (redirect "/login")
@@ -62,10 +62,17 @@
              (println params)
              (db/update-cocktail params))
 
+(defresource delete-cocktail [{:keys [params session]}]
+             :allowed-methods [:delete]
+             :authorized? (authenticated-admin? session)
+             :new? false
+             :delete! (fn [_] (db/delete-cocktail (:id params)))
+             :available-media-types ["application/json"])
 
 (defroutes cocktail-routes
            (GET "/cocktails" request (preview-cocktails (:session request)))
            (PUT "/cocktail" request (update-cocktail request))
+           (DELETE "/cocktail" request (delete-cocktail request))
            (GET "/cocktail/:id" request (get-cocktail request)))
 
 
