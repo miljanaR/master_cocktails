@@ -1,6 +1,6 @@
-(ns master-cocktails.core-test
+(ns master_cocktails.core-test
   (:require [clojure.test :refer :all]
-            [master-cocktails.core :refer :all]))
+            [master_cocktails.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

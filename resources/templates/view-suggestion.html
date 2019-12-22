@@ -1,0 +1,9 @@
+{% include "templates/header.html" %}
+<div>
+    <h3>cocktails</h3>
+</div>
+<div>
+  {% for c in cocktails %}
+  <p> {{c.name}}</p>
+  {% endfor %}
+</div>

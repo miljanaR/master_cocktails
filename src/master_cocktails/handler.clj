@@ -16,6 +16,7 @@
             [master_cocktails.routes.auth :refer [auth-routes]]
             [master_cocktails.routes.home :refer [home-routes]]
             [master_cocktails.routes.cocktail :refer [cocktail-routes]]
+            [master_cocktails.routes.questions :refer [question-routes]]
             ))
 
 (defn is-admin [request]
@@ -38,7 +39,7 @@
            (route/not-found "Not Found"))
 
 (def app
-  (-> (routes auth-routes home-routes cocktail-routes app-routes )
+  (-> (routes auth-routes home-routes question-routes cocktail-routes app-routes  )
       (handler/site)
       (wrap-authorization backend)
       (wrap-authentication backend)

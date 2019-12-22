@@ -63,6 +63,11 @@
   (kor/select style
               (kor/order :id :ASC)))
 
+(defn find-style [params]
+  (kor/select style
+            (kor/where params)
+            (kor/order :id :ASC)))
+
 (defn get-seasons []
   (kor/select season
               (kor/order :id :ASC)))
