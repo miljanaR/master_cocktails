@@ -35,13 +35,58 @@
   =>
   (.setColor ?q nil)
   (.setStyleName ?q "Frozen")
+  (.setText ?q "alcoholic?")
+  (.setSuggestedAnswers ?q ["yes" "no"])
   )
 
 (defrule color-notnil
   [?q <- Question (= "Odaberite zeljenu boju koktela" text) (not= "any color" answer)]
   =>
   (.setColor ?q (.getAnswer ?q))
+  (.setText ?q "alcoholic?")
+  (.setSuggestedAnswers ?q ["yes" "no"])
+  )
+
+(defrule alcoholic-no
+  [?q <- Question (=  "alcoholic?" text) (= "no" answer)]
+  =>
   (.setStyleName ?q "Frozen")
+  (.setCocktail_strength ?q 1)
+  )
+
+(defrule alcoholic-yes
+  [?q <- Question (=  "alcoholic?" text) (= "yes" answer)]
+  =>
+  (.setText ?q "strength?")
+  (.setSuggestedAnswers ?q ["Weak" "Light" "Medium" "Strong"])
+  )
+
+(defrule alcoholic-yesstrength-weak
+  [?q <- Question (=  "strength?" text) (= "Weak" answer)]
+  =>
+  (.setStyleName ?q "Frozen")
+  (.setCocktail_strength ?q 2)
+  )
+
+(defrule alcoholic-yesstrength-wlight
+  [?q <- Question (=  "strength?" text) (= "Light" answer)]
+  =>
+  (.setStyleName ?q "Frozen")
+  (.setCocktail_strength ?q 3)
+  )
+
+(defrule alcoholic-yesstrength-medium
+  [?q <- Question (=  "strength?" text) (= "Medium" answer)]
+  =>
+  (.setStyleName ?q "Frozen")
+  (.setCocktail_strength ?q 4)
+  )
+
+(defrule alcoholic-yesstrength-strong
+  [?q <- Question (=  "strength?" text) (= "Strong" answer)]
+  =>
+  (.setStyleName ?q "Frozen")
+  (.setCocktail_strength ?q 5)
   )
 
 (defquery get-question []

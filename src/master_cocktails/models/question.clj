@@ -16,6 +16,8 @@
   (setPrice [this val])
   (getColor [this])
   (setColor [this val])
+  (getCocktail_strength [this])
+  (setCocktail_strength[this val])
   )
 
 (deftype Question
@@ -26,11 +28,12 @@
    ^:volatile-mutable styleName
    ^:volatile-mutable price
    ^:volatile-mutable color
+   ^:volatile-mutable strength
    ]
   PQuestion
 
   (toString [this] (str "text:" text ",answer:" answer ",suggested:" suggestedAnswers ",id:" styleId ",name:" styleName
-                         ",price:" price ",color:" color ))
+                         ",price:" price ",color:" color ", strength"  strength ))
   (getText [this] text)
   (setText [this val] (set! text val))
   (getAnswer [this] answer)
@@ -45,4 +48,6 @@
   (setPrice [this val] (set! price val))
   (getColor [this] color)
   (setColor [this val] (set! color val))
+  (getCocktail_strength [this] strength)
+  (setCocktail_strength [this val] (set! strength val))
  )

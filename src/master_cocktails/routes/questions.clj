@@ -26,6 +26,7 @@
    :style (.getStyleName q)
    :price (.getPrice q)
    :color (.getColor q)
+   :strength (.getCocktail_strength q)
    })
 
 (defn map->question [{:keys [question]}]
@@ -36,6 +37,7 @@
               (:style question)
               (:price question)
               (:color question)
+              (:strength question)
               ))
 
 (defn get-question-page [{:keys [params session]}]
@@ -57,7 +59,7 @@
     (render-file "templates/view-suggestion.html" {:title "Style"
                                               :logged (:identity session)
                                               :style (first (db/find-style (select-keys params [:id])))
-                                              :cocktails (db/find-cocktail (select-keys params [:style :price :color]))})))
+                                              :cocktails (db/find-cocktail (select-keys params [:style :price :color :strength]))})))
 
 (defresource get-question [{:keys [params session]}]
              :allowed-methods [:post]

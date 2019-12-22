@@ -207,10 +207,10 @@ function deleteCocktail(id) {
             <div class="col-lg-10">
               <select id="cocktail-strngth" name="cocktail-strngth">
                 {% for str in strengths %}
-                {% ifequal str.id cocktail.cocktail-strength %}
+                {% ifequal str.id cocktail.strength %}
                 <option value="{{str.id}}" selected>{{str.name}}</option>
                 {% endifequal %}
-                {% ifunequal str.id cocktail.cocktail-strength %}
+                {% ifunequal str.id cocktail.strength %}
                 <option value="{{str.id}}">{{str.name}}</option>
                 {% endifunequal %}
                 {% endfor %}
@@ -287,5 +287,5 @@ function deleteCocktail(id) {
 </div>
 <div class="clearfix"></div>
 </div>
-<p>{{cocktail.cocktail-strength}}</p>
+<p>{{cocktail.strength}}</p>
 </body>
