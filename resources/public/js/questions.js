@@ -37,15 +37,20 @@ function send() {
         dataType: 'json',
         success: function(data) {
             if (data.id != null && data.id != "") {
-            if (data.color == null){
-            print("color=null")
-            print(data.color)
-             window.location = "/result?style=" + data.id + "&price=" + data.price + "&strength=" + data.strength;
-               print(data.color)
-            }
-            else {
-                window.location = "/result?style=" + data.id + "&color=" + data.color + "&price=" + data.price + "&strength=" + data.strength;
-                }
+            var url = "/result?style=" + data.id + "&price=" + data.price + "&strength=" + data.strength;
+
+            if (data.color != "") {
+            url = url + "&color=" + data.color }
+            else {}
+
+             if (data.season != 5) {
+              url = url + "&season=" + data.season; }
+            else {}
+
+             if (data.moment != 6) {
+              url = url + "&moment=" + data.moment }
+              else {}
+             window.location = url
             } else {
                 $("#question-text").text(data.text);
                 question["text"] = data.text;
@@ -53,6 +58,8 @@ function send() {
                 question["style"] = data.style;
                 question["color"] = data.color;
                 question["strength"] = data.strength;
+                question["season"] = data.season;
+                question["moment"] = data.moment;
                 var questions = '';
                 for (var i = 0; i < data.suggestedAnswers.length; i++) {
                     questions += '<label id="label-quiz" class="element-animation' + (i + 1) + ' btn btn-lg btn-primary btn-block" onclick="sendAnswer(this)"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><input type="radio" name="answer" value="' + data.suggestedAnswers[i] + '">' + data.suggestedAnswers[i] + '</label>';

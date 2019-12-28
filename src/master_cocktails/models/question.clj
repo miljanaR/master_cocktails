@@ -18,6 +18,10 @@
   (setColor [this val])
   (getCocktail_strength [this])
   (setCocktail_strength[this val])
+  (getCocktail_season [this])
+  (setCocktail_season[this val])
+  (getCocktail_moment [this])
+  (setCocktail_moment[this val])
   )
 
 (deftype Question
@@ -29,11 +33,13 @@
    ^:volatile-mutable price
    ^:volatile-mutable color
    ^:volatile-mutable strength
+   ^:volatile-mutable season
+   ^:volatile-mutable moment
    ]
   PQuestion
 
   (toString [this] (str "text:" text ",answer:" answer ",suggested:" suggestedAnswers ",id:" styleId ",name:" styleName
-                         ",price:" price ",color:" color ", strength"  strength ))
+                         ",price:" price ",color:" color ", strength:"  strength ",season"  season " ,moment " moment))
   (getText [this] text)
   (setText [this val] (set! text val))
   (getAnswer [this] answer)
@@ -50,4 +56,8 @@
   (setColor [this val] (set! color val))
   (getCocktail_strength [this] strength)
   (setCocktail_strength [this val] (set! strength val))
+  (getCocktail_season [this] season)
+  (setCocktail_season [this val] (set! season val))
+  (getCocktail_moment [this] moment)
+  (setCocktail_moment [this val] (set! moment val))
  )

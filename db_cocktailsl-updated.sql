@@ -48,7 +48,7 @@ CREATE TABLE `cocktail` (
 /*Data for the table `cocktail` */
 
 insert  into `cocktail`(`id`,`name`,`strength`,`ingredients`,`style`,`price`,`color`,`country`,`mix`,`picture`,`season`,`moment`) values 
-(7,'Black and Tan',1,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,0,'red','Mexico','pour stout beer into the beer glass pour lager into the glass','/images/7.png',4,11),
+(7,'Black and Tan',1,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,0,'red','Mexico','pour stout beer into the beer glass pour lager into the glass','/images/7.png',4,1),
 (8,'cocktail 2',2,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,1,'blue','Japan','pour stout beer into the beer glass pour lager into the glass','/images/8.png',2,2),
 (9,'cocktail 3',1,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,1,'blue','India','pour stout beer into the beer glass pour lager into the glass','/images/9.png',3,3),
 (10,'cocktail 4',1,'1/2 pints stout beer 1/2 pints lager\n                     \n                     ',4,0,'blue','Tunis','pour stout beer into the beer glass pour lager into the glass','/images/18.png',4,4),
@@ -67,20 +67,12 @@ CREATE TABLE `moment` (
 /*Data for the table `moment` */
 
 insert  into `moment`(`id`,`name`) values 
-(1,'Staying in, by the fire'),
-(2,'Poolside'),
-(3,'Company Party'),
+(1,'Company Party/ Family Gatherin'),
+(2,'Girls\' Night'),
+(3,'Guys\' Night'),
 (4,'Downtown'),
-(5,'Family Gathering'),
-(6,'Girls\' Night Out'),
-(7,'Guys\' Night'),
-(8,'House Party'),
-(9,'Club'),
-(10,'Restaurant'),
-(11,'Movie Night'),
-(12,'Beach'),
-(13,'Barbecue & Picnic'),
-(14,'Taking Time for Yourself');
+(5,'Beach/ Barbecue & Picnic'),
+(6,'Poolside/ Taking Time for Yourself ');
 
 /*Table structure for table `season` */
 
