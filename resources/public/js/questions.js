@@ -46,6 +46,9 @@ function send() {
              if (data.season != 5) {
               url = url + "&season=" + data.season; }
             else {}
+           if (data.main_ingredient != "other") {
+              url = url + "&main_ingredient=" + data.main_ingredient; }
+            else {}
 
              if (data.moment != 6) {
               url = url + "&moment=" + data.moment }
@@ -60,6 +63,7 @@ function send() {
                 question["strength"] = data.strength;
                 question["season"] = data.season;
                 question["moment"] = data.moment;
+                question["main_ingredient"] = data.main_ingredient;
                 var questions = '';
                 for (var i = 0; i < data.suggestedAnswers.length; i++) {
                     questions += '<label id="label-quiz" class="element-animation' + (i + 1) + ' btn btn-lg btn-primary btn-block" onclick="sendAnswer(this)"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><input type="radio" name="answer" value="' + data.suggestedAnswers[i] + '">' + data.suggestedAnswers[i] + '</label>';

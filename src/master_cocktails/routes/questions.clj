@@ -29,6 +29,7 @@
    :strength (.getCocktail_strength q)
    :season (.getCocktail_season q)
    :moment (.getCocktail_moment q)
+   :main_ingredient (.getCocktail_main_ingredient q)
    })
 
 (defn map->question [{:keys [question]}]
@@ -42,6 +43,7 @@
               (:strength question)
               (:season question)
               (:moment question)
+              (:main_ingredient question)
               ))
 
 (defn get-question-page [{:keys [params session]}]
@@ -63,7 +65,7 @@
     (render-file "templates/view-suggestion.html" {:title "Style"
                                               :logged (:identity session)
                                               :style (first (db/find-style (select-keys params [:id])))
-                                              :cocktails (db/find-cocktail (select-keys params [:style :price :color :strength :moment :season]))})))
+                                              :cocktails (db/find-cocktail (select-keys params [:style :price :color :strength :moment :season ]))})))
 
 (defresource get-question [{:keys [params session]}]
              :allowed-methods [:post]

@@ -3,8 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="b377734e-2d52-4b1d-aafb-be47867bf55f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/images/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/images/39.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/public/js/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/js/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/view-suggestion.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/view-suggestion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/master_cocktails/models/question.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/master_cocktails/models/question.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/master_cocktails/models/rule.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/master_cocktails/models/rule.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/master_cocktails/routes/questions.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/master_cocktails/routes/questions.clj" afterDir="false" />
@@ -25,9 +55,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/view-suggestion.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/cocktail-user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="25" column="78" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/templates/question.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="272">
               <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -37,73 +94,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/view-suggestion.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" selection-start-column="37" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/public/js/questions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/questions.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="142" selection-start-line="65" selection-start-column="142" selection-end-line="65" selection-end-column="142" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/templates/admin-home-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/question.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+            <state relative-caret-position="316">
+              <caret line="67" column="63" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/public/js/cocktail.js">
+        <entry file="file://$PROJECT_DIR$/resources/templates/cocktail-admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="-27">
+              <caret line="272" column="80" lean-forward="true" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/rule.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="100" column="59" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="59" />
+            <state relative-caret-position="-2109">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/auth.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/cocktail.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/db.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -119,11 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pri</find>
-      <find>sname</find>
-      <find>moment</find>
-      <find>moments</find>
-      <find>mom</find>
       <find>stre</find>
       <find>strena</find>
       <find>cocktail-</find>
@@ -149,6 +183,11 @@
       <find>origin</find>
       <find>cocktail-strength</find>
       <find>cocktail_strength</find>
+      <find>main</find>
+      <find>setSty</find>
+      <find>color</find>
+      <find>how to</find>
+      <find>All Se</find>
     </findStrings>
     <replaceStrings>
       <replace>struct</replace>
@@ -211,8 +250,6 @@
         <option value="$PROJECT_DIR$/resources/templates/admin-home-page.html" />
         <option value="$PROJECT_DIR$/resources/templates/cocktails-view.html" />
         <option value="$PROJECT_DIR$/resources/templates/cocktail-user.html" />
-        <option value="$PROJECT_DIR$/resources/public/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/templates/cocktail-admin.html" />
         <option value="$PROJECT_DIR$/src/master_cocktails/routes/cocktail.clj" />
         <option value="$PROJECT_DIR$/src/master_cocktails/models/statement.clj" />
         <option value="$PROJECT_DIR$/src/master_cocktails/routes/statements.clj" />
@@ -221,17 +258,19 @@
         <option value="$PROJECT_DIR$/src/master_cocktails/handler.clj" />
         <option value="$PROJECT_DIR$/resources/templates/base.html" />
         <option value="$PROJECT_DIR$/resources/templates/style-user.html" />
-        <option value="$PROJECT_DIR$/resources/templates/view-suggestion.html" />
         <option value="$PROJECT_DIR$/resources/templates/header.html" />
-        <option value="$PROJECT_DIR$/src/master_cocktails/models/question.clj" />
-        <option value="$PROJECT_DIR$/resources/public/js/questions.js" />
-        <option value="$PROJECT_DIR$/src/master_cocktails/routes/questions.clj" />
         <option value="$PROJECT_DIR$/resources/templates/question.html" />
+        <option value="$PROJECT_DIR$/src/master_cocktails/models/question.clj" />
+        <option value="$PROJECT_DIR$/src/master_cocktails/routes/questions.clj" />
+        <option value="$PROJECT_DIR$/resources/public/js/questions.js" />
+        <option value="$PROJECT_DIR$/resources/templates/view-suggestion.html" />
+        <option value="$PROJECT_DIR$/resources/templates/cocktail-admin.html" />
         <option value="$PROJECT_DIR$/src/master_cocktails/models/rule.clj" />
+        <option value="$PROJECT_DIR$/resources/public/css/style.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1374" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -243,13 +282,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
               <item name="master_cocktails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master_cocktails" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master_cocktails" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master_cocktails" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master_cocktails" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master_cocktails" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="master_cocktails" type="b2602c69:ProjectViewProjectNode" />
@@ -281,6 +350,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,11 +434,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.37697518" side_tool="true" weight="0.25718608" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.5765199" visible="true" weight="0.118003026" />
-      <window_info id="Structure" order="6" sideWeight="0.4234801" side_tool="true" visible="true" weight="0.118003026" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.21931261" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.5744235" visible="true" weight="0.16641453" />
+      <window_info id="Structure" order="6" sideWeight="0.4255765" side_tool="true" visible="true" weight="0.16641453" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50226927" side_tool="true" visible="true" weight="0.21931261" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49848714" visible="true" weight="0.21931261" />
+      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.4977307" visible="true" weight="0.21931261" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32776934" />
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -385,7 +455,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info active="true" anchor="right" x="-1366" y="23" width="1366" height="705" id="Terminal" maximized="true" order="10" sideWeight="0.4977307" side_tool="true" type="WINDOWED" visible="true" weight="0.45335516" />
+      <window_info anchor="right" x="-1366" y="23" width="1366" height="705" id="Terminal" maximized="true" order="10" sideWeight="0.4977307" side_tool="true" type="WINDOWED" visible="true" weight="0.45335516" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -467,33 +537,12 @@
     <entry file="file://$PROJECT_DIR$/resources/public/js/like.js" />
     <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/like.clj" />
     <entry file="file://$PROJECT_DIR$/db_cocktailsl.sql" />
-    <entry file="file://$PROJECT_DIR$/resources/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/statement.clj" />
     <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/statements.clj" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core$throw_if.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/auth.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/cocktail.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
@@ -568,37 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/cocktail-admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="53" column="19" selection-start-line="53" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/cocktail-user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/db.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="56" column="54" lean-forward="true" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -606,24 +624,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/view-suggestion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/js/questions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+        <state relative-caret-position="1258">
+          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/questions.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="142" selection-start-line="65" selection-start-column="142" selection-end-line="65" selection-end-column="142" />
+        <state relative-caret-position="1139">
+          <caret line="67" column="70" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -634,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/question.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/js/cocktail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -648,10 +652,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/auth.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/master_cocktails/routes/cocktail.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/db.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/cocktail-user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="78" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/cocktail-admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="272" column="80" lean-forward="true" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/question.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="67" column="63" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/master_cocktails/models/rule.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="100" column="59" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="59" />
+        <state relative-caret-position="-2109">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/view-suggestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
         </state>
       </provider>
     </entry>
