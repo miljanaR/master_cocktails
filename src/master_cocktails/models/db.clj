@@ -49,6 +49,14 @@
               (kor/join moment (= :moment :moment.id))
               (kor/join strength (= :strength :strength.id))
               (kor/order :id :ASC)))
+
+(defn find-favourite-cocktails [params]
+  (kor/select favourites
+              (kor/fields :* :cocktail.name :cocktail.id :cocktail.picture :user :user.id )
+              (kor/join user (= :user :user.id))
+              (kor/join cocktail (= :cocktail :cocktail.id))
+              (kor/where {:user 1})))
+
 (defn find-cocktail [params]
   (kor/select cocktail
               (kor/fields :* [:style.name :sname])

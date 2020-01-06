@@ -15,6 +15,11 @@
           (= "" text))
     (db/get-cocktails)
     ))
+(defn get-favs [text]
+  (if (or (nil? text)
+          (= "" text))
+    (db/find-favourite-cocktails())
+    ))
 (defn authenticated-admin? [session]
   (and (authenticated? session)
        (= "admin" (:role (:identity session)))))
@@ -23,6 +28,10 @@
   (render-file "templates/cocktails-view.html" {:title     "Preview cocktails"
                                                 :logged    (:identity session)
                                                 :cocktails (get-cocktails nil)}))
+(defn get-fav-cocktails [params session]
+  (render-file "templates/view-favourites.html" {:title     "Preview cocktails"
+                                                :logged    (:identity session)
+                                                :cocktails (get-favs nil)}))
 
 (defresource preview-cocktails [{:keys [params session]}]
              :allowed-methods [:get]
@@ -32,6 +41,15 @@
                              "text/html" (get-search-cocktails params session)
                              "application/json" (-> (:text params)
                                                     (get-cocktails)
+                                                    (json/write-str)))))
+(defresource preview-favourites[{:keys [params session]}]
+             :allowed-methods [:get]
+             :available-media-types ["text/html" "application/json"]
+             :handle-ok #(let [media-type (get-in % [:representation :media-type])]
+                           (condp = media-type
+                             "text/html" (get-fav-cocktails params session)
+                             "application/json" (-> (:text params)
+                                                    ( get-fav-cocktails ())
                                                     (json/write-str)))))
 (defn get-cocktail-page [page params session & [message]]
   (println params)
@@ -72,6 +90,7 @@
 
 (defroutes cocktail-routes
            (GET "/cocktails" request (preview-cocktails (:session request)))
+           (GET "/favourites" request (preview-favourites (:session request)))
            (PUT "/cocktail" request (update-cocktail request))
            (DELETE "/cocktail" request (delete-cocktail request))
            (GET "/cocktail/:id" request (get-cocktail request)))

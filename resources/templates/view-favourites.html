@@ -1,0 +1,28 @@
+{% include "templates/header.html" %}
+{% block content %}
+
+
+</div>
+<div class="business-team">
+  <div class="team-info">
+    <h3 > YOUR FAVOURITES</h3>
+  </div>
+  <div class="business-grids">
+    {% for c in cocktails %}
+    <div class="square">
+      <div class="content-pic">
+        <div class="table">
+          <div class="table-cell">
+            <p>  {{c.name}}</p>
+            <a href="/cocktail/{{c.id}}"> <img class="rs" src="{{c.picture}}"/></a>
+            {{c.user}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="clearfix"></div>
+</div>
+{% endblock %}
