@@ -28,6 +28,9 @@
 (kor/defentity cocktail
                (kor/table :cocktail))
 
+(kor/defentity favourites
+               (kor/table :favourites))
+
 (defn add-user [params]
   (kor/insert user
               (kor/values params)))
@@ -78,6 +81,15 @@
 (defn get-strengths []
   (kor/select strength
               (kor/order :id :ASC)))
+(defn add-favourites [params]
+  (kor/insert favourites
+              (kor/values params)))
+(defn delete-favourites [params]
+  (kor/delete favourites
+            (kor/where params)))
+(defn find-fav [params]
+  (kor/select favourites
+            (kor/where params)))
 
 (defn delete-cocktail [id]
   (kor/delete cocktail

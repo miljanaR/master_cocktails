@@ -43,6 +43,7 @@
                      :seasons   (db/get-seasons)
                      :moments   (db/get-moments)
                      :strengths (db/get-strengths)
+                     :liked (count (db/find-fav (hash-map :cocktail (:id params) :user (:id (:identity session)))))
                      }))
 
 (defn get-cocktail [{:keys [params session]} & [message]]

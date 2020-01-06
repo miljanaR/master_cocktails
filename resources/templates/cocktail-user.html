@@ -24,6 +24,14 @@
         <p class="strengthp"><strong>ingredients:</strong> {{cocktail.ingredients}}</p>
         <p class="strengthp"><strong>Country:</strong> {{cocktail.country}}</p>
         <p class="strengthp"><strong>How ro mix:</strong> {{cocktail.mix}}</p>
+        <div id="button-fav">
+          {% ifequal liked 0 %}
+          <input type="button" value="Favourite" onclick="favourite({{cocktail.id}})"/>
+          {% endifequal %}
+          {% ifunequal liked 0 %}
+          <input type="button" value="Remove from favourites" onclick="removeFromFav({{cocktail.id}})"/>
+          {% endifunequal  %}
+        </div>
       </div>
     </div>
   </div>
