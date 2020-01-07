@@ -8,18 +8,24 @@
     <h3 >COCKTAILS</h3>
   </div>
   <div class="business-grids">
+    {% ifequal cocktails|length 0 %}
+    <p> Currently we don't have any cocktails that match your requirements</p>
+    {% endifequal %}
+    {% ifunequal  cocktails|length 0 %}
     {% for c in cocktails %}
     <div class="square">
       <div class="content-pic">
         <div class="table">
           <div class="table-cell">
+            <p> {{c.name}}</p>
             <a href="/cocktail/{{c.id}}"> <img class="rs" src="{{c.picture}}"/></a>
-            {{c.name}}
+
           </div>
         </div>
       </div>
     </div>
     {% endfor %}
+    {% endifunequal %}
   </div>
   <div class="clearfix"></div>
 </div>

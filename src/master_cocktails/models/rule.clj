@@ -18,7 +18,7 @@
   =>
   (.setPrice ?q 1)
   (.setText ?q "Choose color for cocktail")
-  (.setSuggestedAnswers ?q ["any color" "blue" "red/orange/pink" "brown" "other"])
+  (.setSuggestedAnswers ?q ["any color" "blue/green" "red/orange/pink" "brown" "other"])
   )
 
 (defrule price-0
@@ -26,7 +26,7 @@
   =>
   (.setPrice ?q 0)
   (.setText ?q "Choose color for cocktail")
-  (.setSuggestedAnswers ?q ["any color" "blue" "red/orange/pink" "brown" "other"])
+  (.setSuggestedAnswers ?q ["any color" "red/orange/pink" "brown" "other"])
   )
 
 (defrule color-nil
@@ -45,6 +45,8 @@
   (.setSuggestedAnswers ?q [ "Light" "Medium" "Strong"])
   )
 
+
+
 (defrule alcoholic-yes-strength-light
   [?q <- Question (=  "strength?" text) (= "Light" answer)]
   =>
@@ -58,7 +60,7 @@
   =>
   (.setCocktail_strength ?q 4)
   (.setText ?q "the main ingredient?")
-  (.setSuggestedAnswers ?q [ "Tequila" "gin" "Whiskey" "rum" "other"])
+  (.setSuggestedAnswers ?q [ "Tequila" "gin" "Whiskey" "other"])
   )
 
 (defrule alcoholic-yes-strength-strong
@@ -81,16 +83,16 @@
   [?q <- Question (=  "season?" text) (= "Fall/Winter" answer)]
   =>
   (.setCocktail_season ?q 5)
-  (.setText ?q "moment?")
-  (.setSuggestedAnswers ?q [  "All moments" "Company Party/ Family Gathering"  "Night Out"  ])
+  (.setText ?q "style?")
+  (.setSuggestedAnswers ?q [ "Martini" "Classic" "Short"])
 
   )
 (defrule alcoholic-yes-strength-strong-season-spring
   [?q <- Question (=  "season?" text) (= "Spring/Summer" answer)]
   =>
   (.setCocktail_season ?q 5)
-  (.setText ?q "moment?")
-  (.setSuggestedAnswers ?q [ "All moments" "Company Party/ Family Gathering"  "Beach/ Barbecue & Picnic" "Poolside/ Taking Time for Yourself "])
+  (.setText ?q "style?")
+  (.setSuggestedAnswers ?q [ "Martini" "Classic" "Longdrink/Tropical"])
 
   )
 
@@ -98,46 +100,10 @@
   [?q <- Question (=  "season?" text) (= "All seasons" answer)]
   =>
   (.setCocktail_season ?q 5)
-  (.setText ?q "moment?")
-  (.setSuggestedAnswers ?q [  "All moments" "Company Party/ Family Gathering"  "Night Out" "Beach/ Barbecue & Picnic" "Poolside/ Taking Time for Yourself " ])
-  )
-(defrule alcoholic-yes-moment-company
-  [?q <- Question (=  "moment?" text) (= "Company Party/ Family Gathering" answer)]
-  =>
-  (.setCocktail_moment ?q 1)
   (.setText ?q "style?")
-  (.setSuggestedAnswers ?q [ "Martini" "Classic" "Longdrink/Tropical"])
+  (.setSuggestedAnswers ?q [ "Martini" "Classic" "Longdrink/Tropical" "Short"])
   )
 
-(defrule alcoholic-yes-moment-girls
-  [?q <- Question (=  "moment?" text) (= "Night Out" answer)]
-  =>
-  (.setCocktail_moment ?q 2)
-  (.setText ?q "style?")
-  (.setSuggestedAnswers ?q [ "Martini" "Classic"  "Longdrink/Tropical"])
-  )
-
-(defrule alcoholic-yes-moment-beach
-  [?q <- Question (=  "moment?" text) (= "Beach/ Barbecue & Picnic" answer)]
-  =>
-  (.setCocktail_moment ?q 4)
-  (.setText ?q "style?")
-  (.setSuggestedAnswers ?q ["Martini" "Classic"  "Longdrink/Tropical"  ])
-  )
-(defrule alcoholic-yes-moment-poolside
-  [?q <- Question (=  "moment?" text) (= "Poolside/ Taking Time for Yourself " answer)]
-  =>
-  (.setCocktail_moment ?q 5)
-  (.setText ?q "style?")
-  (.setSuggestedAnswers ?q [ "Classic"  "Longdrink/Tropical" ])
-  )
-(defrule alcoholic-yes-moment-all
-  [?q <- Question (=  "moment?" text) (= "All moments" answer)]
-  =>
-  (.setCocktail_moment ?q 6)
-  (.setText ?q "style?")
-  (.setSuggestedAnswers ?q ["Martini" "Classic" "Longdrink/Tropical" "Short"   ])
-  )
 (defrule style
   [?q <- Question (=  "style?" text) (not= nil answer)]
   =>
@@ -151,7 +117,6 @@
   (query session get-question))
 
 (defn ask-question [q]
-  (println "-------------:" q)
   (-> (mk-session 'master_cocktails.models.rule)
       (insert q)
       (fire-rules)

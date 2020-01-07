@@ -21,7 +21,6 @@
             ))
 
 (defn is-admin [request]
-  (println request)
   (contains? (apply hash-set (:role request)) "ADMIN"))
 
 (def backend (session-backend))

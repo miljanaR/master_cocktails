@@ -50,12 +50,12 @@
               (kor/join strength (= :strength :strength.id))
               (kor/order :id :ASC)))
 
-(defn find-favourite-cocktails [params]
+(defn find-favourite-cocktails [user_id]
   (kor/select favourites
               (kor/fields :* :cocktail.name :cocktail.id :cocktail.picture :user :user.id )
               (kor/join user (= :user :user.id))
               (kor/join cocktail (= :cocktail :cocktail.id))
-              (kor/where {:user 1})))
+              (kor/where {:user user_id})))
 
 (defn find-cocktail [params]
   (kor/select cocktail

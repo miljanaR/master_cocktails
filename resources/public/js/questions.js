@@ -49,10 +49,6 @@ function send() {
            if (data.main_ingredient != "other") {
               url = url + "&main_ingredient=" + data.main_ingredient; }
             else {}
-
-             if (data.moment != 6) {
-              url = url + "&moment=" + data.moment }
-              else {}
              window.location = url
             } else {
                 $("#question-text").text(data.text);
@@ -62,7 +58,6 @@ function send() {
                 question["color"] = data.color;
                 question["strength"] = data.strength;
                 question["season"] = data.season;
-                question["moment"] = data.moment;
                 question["main_ingredient"] = data.main_ingredient;
                 var questions = '';
                 for (var i = 0; i < data.suggestedAnswers.length; i++) {

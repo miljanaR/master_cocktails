@@ -18,7 +18,6 @@
                       (db/find-style)
                       (first)
                       (:id))))
-  (println "*****************: " q)
   {:text (.getText q)
    :answer (.getAnswer q)
    :suggestedAnswers (.getSuggestedAnswers q)
@@ -65,7 +64,7 @@
     (render-file "templates/view-suggestion.html" {:title "Style"
                                               :logged (:identity session)
                                               :style (first (db/find-style (select-keys params [:id])))
-                                              :cocktails (db/find-cocktail (select-keys params [:style :price :color :strength :moment :season ]))})))
+                                              :cocktails (db/find-cocktail (select-keys params [:style :price :color :strength :main_ingredient ]))})))
 
 (defresource get-question [{:keys [params session]}]
              :allowed-methods [:post]

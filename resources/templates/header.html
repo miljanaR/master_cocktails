@@ -22,15 +22,26 @@
         li {
         display: inline;
         }
+        body {
+        background: url("../images/bc1.png") no-repeat center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+            }
 
   </style>
 </head>
 <body>
-<ul>
-  <li><a href="/favourites">Favourites</a></li>
-  <li><a href="/cocktails">Cocktails</a></li>
-  <li><a href="/questions">Recommend me a cocktail</a></li>
-  <li><a href="/logout">Logout</a></li>
-
-</ul>
+<nav class="navbar navbar-default">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="/favourites">Favourites <span class="sr-only">(current)</span></a></li>
+      <li><a href="/cocktails">Cocktails</a></li>
+      <li><a href="/questions">Recommend me a cocktail</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 </body>
