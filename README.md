@@ -1,10 +1,34 @@
 # master_cocktails
 
-A Clojure library designed to ... well, that part is up to you.
+## Prerequisites
 
-## Usage
+You will need Leiningen and MySql installed.
 
-FIXME
+## Running
+
+Steps for running this application:
+
+1. Login to the MySQL server and create database db_cocktails with the following command:
+
+
+You can change database configuration in configuration/db-config.edn:
+
+    {:db "db_cocktails" :user "root" :password ""}
+
+3. To start a web server for the application, run command:
+
+	lein ring server
+
+Finally, login as admin:
+
+    username: admin
+    password: admin
+
+Or register your user account.
+
+## About this Project
+
+You can see more on https://drive.google.com/open?id=1S4ZguwEJS0H9W_IFpB99NLjLySblqs2S
 
 ## License
 
